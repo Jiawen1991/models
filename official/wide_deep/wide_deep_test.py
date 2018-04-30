@@ -117,6 +117,7 @@ class BaseTest(tf.test.TestCase):
     self.build_and_test_estimator('wide_deep')
 
   def test_end_to_end_wide(self):
+    wide_deep.define_wide_deep_flags()
     integration.run_synthetic(
         main=wide_deep.main, tmp_root=self.get_temp_dir(), extra_flags=[
             '--data_dir', self.get_temp_dir(),
@@ -125,6 +126,7 @@ class BaseTest(tf.test.TestCase):
         synth=False, max_train=None)
 
   def test_end_to_end_deep(self):
+    wide_deep.define_wide_deep_flags()
     integration.run_synthetic(
         main=wide_deep.main, tmp_root=self.get_temp_dir(), extra_flags=[
             '--data_dir', self.get_temp_dir(),
@@ -133,6 +135,7 @@ class BaseTest(tf.test.TestCase):
         synth=False, max_train=None)
 
   def test_end_to_end_wide_deep(self):
+    wide_deep.define_wide_deep_flags()
     integration.run_synthetic(
         main=wide_deep.main, tmp_root=self.get_temp_dir(), extra_flags=[
             '--data_dir', self.get_temp_dir(),
