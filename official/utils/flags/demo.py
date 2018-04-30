@@ -32,12 +32,11 @@ def define_flags():
   flags.adopt_module_key_flags(flags_core)
 
 
-def main(argv):
-  define_flags()
-  flags_core.parse_flags(argv=argv)
+def main(_):
   print(flags.FLAGS.foo)
   print(flags.FLAGS.bar)
 
 
 if __name__ == "__main__":
-  main(argv=sys.argv)
+  define_flags()
+  absl_app.run(main)

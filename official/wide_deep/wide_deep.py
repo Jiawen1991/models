@@ -59,7 +59,7 @@ def define_wide_deep_flags():
 
   flags.adopt_module_key_flags(flags_core)
 
-  choices=['wide', 'deep', 'wide_deep']
+  choices = ['wide', 'deep', 'wide_deep']
   flags.DEFINE_string(
       name="model_type", short_name="mt", default="wide_deep",
       help="Select model topology.\n{}".format(

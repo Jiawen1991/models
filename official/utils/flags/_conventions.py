@@ -22,7 +22,6 @@ import functools
 
 from absl import app as absl_app
 from absl import flags
-import tensorflow as tf
 
 
 # This codifies help string conventions and makes it easy to update them if

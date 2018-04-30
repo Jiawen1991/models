@@ -27,8 +27,8 @@ import sys
 from absl import flags
 
 from official.utils.flags import _base
-from official.utils.flags import _conventions
 from official.utils.flags import _benchmark
+from official.utils.flags import _conventions
 from official.utils.flags import _example
 from official.utils.flags import _misc
 from official.utils.flags import _performance
@@ -55,13 +55,13 @@ def call_only_once(f):
 
 
 def parse_flags(argv=None):
-  """Reset flags and reparse. Only used by utils.testing.integration"""
+  """Reset flags and reparse. Only used by utils.testing.integration."""
   flags.FLAGS.unparse_flags()
   try:
     flags.FLAGS(sys.argv if argv is None else argv)
   except flags.Error as error:
-    sys.stderr.write('FATAL Flags parsing error: %s\n' % error)
-    sys.stderr.write('Pass -h or --helpfull to see help on flags.\n')
+    sys.stderr.write("FATAL Flags parsing error: %s\n" % error)
+    sys.stderr.write("Pass -h or --helpfull to see help on flags.\n")
     sys.exit(1)
 
 
