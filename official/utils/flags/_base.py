@@ -104,7 +104,7 @@ def define_base(data_dir=True, model_dir=True, train_epochs=True,
             u"A comma separated list of (case insensitive) strings to specify "
             u"the names of training hooks.\n{}\n\ufeff  "
             u"Example: `--hooks ProfilerHook,ExamplesPerSecondHook`\n\ufeff  "
-            u"(or)     `-hk p,eps`\nSee official.utils.logs.hooks_helper for "
+            u"(or)     `-hk ph,epsh`\nSee official.utils.logs.hooks_helper for "
             u"details.".format(hook_list_str))
     )
     key_flags.append("hooks")

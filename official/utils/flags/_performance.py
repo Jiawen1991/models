@@ -122,14 +122,14 @@ def define_performance(num_parallel_calls=True, inter_op=True, intra_op=True,
             "gradients from underflowing to zero. If not provided the default "
             "for fp16 is 128 and 1 for all other dtypes."))
 
-    _dtype_val_msg = "Valid dtypes: {}".format(to_choices_str(DTYPE_MAP.keys()))
-    @flags.validator(flag_name="dtype", message=_dtype_val_msg)
+    dtype_val_msg = "Valid dtypes: {}".format(to_choices_str(DTYPE_MAP.keys()))
+    @flags.validator(flag_name="dtype", message=dtype_val_msg)
     def _check_dtype(dtype):  # pylint: disable=unused-variable
       if dtype in DTYPE_MAP:
         return True
 
-    _loss_scale_val_msg = "loss_scale should be a positive integer."
-    @flags.validator(flag_name="loss_scale", message=_loss_scale_val_msg)
+    loss_scale_val_msg = "loss_scale should be a positive integer."
+    @flags.validator(flag_name="loss_scale", message=loss_scale_val_msg)
     def _check_loss_scale(loss_scale):  # pylint: disable=unused-variable
       if loss_scale is None:
         return True  # null case is handled in get_loss_scale()

@@ -55,6 +55,7 @@ LOSS_PREFIX = {'wide': 'linear/', 'deep': 'dnn/'}
 
 @flags_core.call_only_once
 def define_wide_deep_flags():
+  """Add supervised learning flags, as well as wide-deep model type."""
   flags_core.define_base()
 
   flags.adopt_module_key_flags(flags_core)

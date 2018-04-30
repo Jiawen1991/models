@@ -24,7 +24,7 @@ from official.utils.flags._conventions import help_wrap
 from official.utils.flags._conventions import to_choices_str
 
 
-def define_example(foo=True, bar=True):
+def define_example(foo=True, bar=True):  # pylint: disable=blacklisted-name
   """Register a flag called `--foo`.
 
   Args:

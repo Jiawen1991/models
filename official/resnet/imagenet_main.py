@@ -311,6 +311,7 @@ def imagenet_model_fn(features, labels, mode, params):
 def define_imagenet_flags():
   resnet_run_loop.define_resnet_flags(
       resnet_size_choices=[18, 34, 50, 101, 152, 200])
+  flags.adopt_module_key_flags(resnet_run_loop)
   flags_core.set_defaults(train_epochs=100)
 
 

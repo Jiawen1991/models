@@ -160,8 +160,8 @@ HOOKS = {
 }
 
 HOOKS_ALIAS = {
-    "lt": "LoggingTensorHook",
-    "p": "ProfilerHook",
-    "eps": "ExamplesPerSecondHook",
-    "lm": "LoggingMetricHook",
+    "lth": "LoggingTensorHook",
+    "ph": "ProfilerHook",
+    "epsh": "ExamplesPerSecondHook",
+    "lmh": "LoggingMetricHook",
 }

@@ -460,6 +460,7 @@ def warn_on_multi_gpu_export(multi_gpu=False):
 
 @flags_core.call_only_once
 def define_resnet_flags(resnet_size_choices=None):
+  """Add flags and validators for ResNet."""
   flags_core.define_base()
   flags_core.define_performance()
   flags_core.define_image()
